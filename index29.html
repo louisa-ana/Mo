@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script type="text/javascript" src="script.js"></script>
+
+</head>
+
+<style>
+ 
+ body {
+         font-family: Arial, sans-serif;
+         background-color: #EDE7F6;
+         margin: 0;
+         padding: 0;
+     }
+ 
+     #start {
+         text-align: center;
+         margin-top: 50px;
+     }
+ 
+     .mg {
+         background-color: purple;
+         color: #fff;
+         padding: 20px;
+         text-align: center;
+     }
+     .text{
+         text-align: center;
+     }
+
+     #btcont{
+        display: none;
+        border-color: purple;
+     }
+     .checkbox{
+        display: grid;
+        justify-content: center;
+     }
+
+</style>
+
+<body>
+    <div class="mg"><h1>Mouse Game</h1></div>
+
+    <br>
+    <p class="text"> As caixas de seleção permitem selecionar uma ou mais opções de um grupo de opções. Clique dentro de cada uma das caixas de seleção brancas abaixo para continuar.</p>
+    <br>
+
+    <div  class="checkbox">
+       <p><input type="checkbox" id="1"  onclick="addum()" <strong>Rosa do deserto</strong></p> 
+       <p><input type="checkbox" id="2" onclick="addum2()"<strong>Bromélia</strong></p>
+       <p><input type="checkbox" id="3" onclick="addum3()"<strong>Crisântemo</strong></p>
+       <p><input type="checkbox" id="4" onclick="addum4()" <strong>Hibisco</strong></p>
+       <p><input type="checkbox" id="5" onclick="addum5()" <strong>Rosa</strong></p>
+       <p><input type="checkbox" id="6" onclick="addum6()"<strong>Helicônia</strong></p>
+
+       <button id="btcont" onclick="location = 'index30.html'">Continue</button>
+
+    </div>
+
+    <script>
+var check = 0
+var tcheck = 6
+
+ 
+
+function vcheck(){
+    if(check===tcheck) {
+        document.getElementById("btcont").style.display = "block";  
+
+        }
+    else{
+        btcont.style.display = "none"
+    }
+
+ }
+
+function addum(){
+    check ++;
+    vcheck();
+}
+
+function addum2(){
+    check ++;
+    vcheck();
+}
+
+function addum3(){
+    check ++;
+    vcheck();
+}
+
+function addum4(){
+    check ++;
+    vcheck();
+}
+
+function addum5(){
+    check ++;
+    vcheck();
+}
+
+function addum6(){
+    check ++;
+    vcheck();
+}
+    </script>
+  

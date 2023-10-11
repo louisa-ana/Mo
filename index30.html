@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script type="text/javascript" src="script.js"></script>
+</head>
+<style>
+ 
+    body {
+            font-family: Arial, sans-serif;
+            background-color: #EDE7F6;
+            margin: 0;
+            padding: 0;
+        }
+    
+        #start {
+            text-align: center;
+            margin-top: 50px;
+        }
+    
+        .mg {
+            background-color: purple;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        .text{
+            text-align: center;
+        }
+
+        #btcont{
+            display: none;
+           border-color: purple;
+        }
+
+        .pics{
+            display: flex;
+            position: absolute;
+            left: 40%;
+            width: 800px;
+            top: 35%;
+        }
+
+        .cesta1 {
+            display: none;
+            position: absolute;
+            top: 40%;
+            width: 750px;
+            left: 41%;
+            height: 240px;
+        }
+
+    .cesta2{
+        display: none;
+        position: absolute;
+        width: 80px;
+        height: 80px;
+        top:36%;
+        left: 43%;
+    }
+
+    .cesta3{
+        display: none;
+        position: absolute;
+        width: 110px ;
+        height: 100px ;
+        top: 40% ;
+        left: 65%;
+    }
+    
+
+</style>
+
+<body>
+    <div class="mg"><h1>Mouse Game</h1></div>
+
+    <br>
+    <p class="text"> Selecione as três opções nas caixas de seleção abaixo e clique no botão ‘Continuar’.	</p>
+    <p class="text"> Complete o jardim!</p>
+
+</br>
+<div>
+    <div class="doces3">
+        <div>
+            <input type="checkbox" name="option" id="Flores" onclick="doce1();addum()"; ><strong>Flores</strong><br><br>
+            <input type="checkbox" name="option"id="Borboleta" onclick="doce2();addum2() "><strong>Borboleta</strong><br><br>
+            <input type="checkbox" name="option" id="Abelha" onclick="doce3(); addum3()"><strong>Abelha</strong><br><br>            
+        </div>
+
+        <picture>
+
+            <img  class="pics" src="29.png">
+            <img id="cesta1" class="cesta1 c" src="page30.png">
+            <img  id="cesta2" class="cesta2 c" src="2page28.png">
+            <img id="cesta3" class="cesta3 c" src="2page30.png">
+        </picture>
+
+<div><button id="btcont" onclick="location = 'index31.html'">Continue</button></div>
+
+        
+    <script>
+
+var check = 0
+var tcheck = 3
+
+function vcheck(){
+    if(check===tcheck) {
+        document.getElementById("btcont").style.display = "block";  
+
+        }
+        else{
+            btcont.style.display="none"
+        }
+
+ }
+
+function addum(){
+    check ++;
+    vcheck();
+}
+
+function addum2(){
+    check ++;
+    vcheck();
+}
+
+function addum3(){
+    check ++;
+    vcheck();
+}
+
+
+
+      function doce1() {
+var checkbox = document.getElementById("Flores");
+var imagem = document.getElementById("cesta1");
+
+if (checkbox.checked) {
+    imagem.style.display = "block"; // Mostra a imagem
+} else {
+    imagem.style.display = "none"; // Oculta a imagem
+}
+
+}
+
+function doce2() {
+var checkbox = document.getElementById("Borboleta");
+var imagem = document.getElementById("cesta2");
+
+if (checkbox.checked) {
+    imagem.style.display = "block"; // Mostra a imagem
+} else {
+    imagem.style.display = "none"; // Oculta a imagem
+}
+
+}
+
+function doce3() {
+var checkbox = document.getElementById("Abelha");
+var imagem = document.getElementById("cesta3");
+
+if (checkbox.checked) {
+    imagem.style.display = "block"; // Mostra a imagem
+} else {
+    imagem.style.display = "none"; // Oculta a imagem
+}
+
+}
+
+    </script>
+
+</div>

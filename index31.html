@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script type="text/javascript" src="script.js"></script>
+</head>
+
+<style>
+body {
+    font-family: Arial, sans-serif;
+    background-color: #EDE7F6;
+    margin: 0;
+    padding: 0;
+}
+
+.mg {
+    background-color: purple;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+.text {
+    text-align: center;
+}
+
+.radio{
+    display: grid;
+    justify-content: center;
+}
+
+#botao {
+    display: none;
+    border-color: purple;
+    position: relative;
+    left: 47%;
+}
+</style>
+
+<body>
+    <div class="mg"><h1>Mouse Game</h1></div>
+
+    <br>
+    <p class="text"> Os botões de opção permitem escolher apenas uma opção de um grupo de opções. Clique em cada um dos botões de opção abaixo para continuar. </p>
+    <p class="text">(Observe que apenas um será selecionado por vez.)</p>
+    <br>
+
+    <div class="radio">
+
+       <p> <input type="radio" name="option" onclick="um()" <strong>Edgar Allan Poe</strong></p>
+       <p> <input type="radio" name="option" onclick="dois()" <strong>Jane Austen </strong></p>
+         <p><input type="radio" name="option" onclick="tres()" <strong> Machado de Assis</strong></p>
+       <p> <input type="radio" name="option" onclick="quatro()" <strong>Antoine de Saint-Exupéry </strong></p>
+      <p>  <input type="radio" name="option" onclick="cinco()" <strong>Emily Dickinson </strong></p>
+      <p>  <input type="radio" name="option" onclick="seis()" <strong>Fyodor Dostoevsky</strong></p>
+       <p> <input type="radio" name="option" onclick="sete()" <strong>Virginia Woolf</strong></p>
+      <p> <input type="radio" name="option" onclick="oito()" <strong>Gabriel García Márquez</strong></p>
+      <p>  <input type="radio" name="option" onclick="nove()" <strong>Franz Kafka</strong> </p>
+      <p>  <input type="radio" name="option" onclick="dez()" <strong>Leo Tolstoy </strong></p>
+    </div>
+    <button id="botao" onclick="location = 'index32.html'">Continuar</button>
+
+</body>
+
+<script>
+    var check = 0
+    var tcheck = 10
+
+    function vcheck(){
+        if(check===tcheck) {
+            document.getElementById("botao").style.display = "block";
+
+        }
+        else{
+            botao.style.display="none"
+        }
+
+    }
+
+    function um(){
+        check ++;
+        vcheck();
+    }
+
+    function dois(){
+        check ++;
+        vcheck();
+
+    }
+
+    function tres(){
+        check ++;
+        vcheck();
+    }
+
+    function quatro(){
+        check ++;
+        vcheck();
+    }
+
+    function cinco(){
+        check ++;
+        vcheck();
+
+    }
+
+    function seis(){
+        check ++;
+        vcheck();
+
+    }
+
+    function sete(){
+        check ++;
+        vcheck();
+    }
+
+    function oito(){
+        check ++;
+        vcheck();
+    }
+
+    function nove(){
+        check ++;
+        vcheck();
+    }
+
+    function dez(){
+        check ++;
+        vcheck();
+    }
+
+</script>
+
+</html>

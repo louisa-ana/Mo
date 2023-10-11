@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mouse Game</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #EDE7F6;
+            margin: 0;
+            padding: 0;
+        }
+
+        .mg {
+            background-color: purple;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .text {
+            text-align: center;
+        }
+
+
+        .square {
+width: 100px;
+height: 100px;
+background-color: lightblue;
+position: absolute;
+cursor: grab;
+
+}
+
+.text2 {
+border: solid 2px;
+width: 150px;
+height: 150px;
+position: absolute;
+top: 360px;
+left: 810px;
+}
+
+#continue-button {
+display: none;
+position: absolute;
+top: 600px;
+left: 880px;
+cursor: pointer;
+border-color: blue;
+
+}
+    </style>
+</head>
+<body>
+    <div class="mg">
+        <h1>Mouse Game</h1>
+    </div>
+    <br>
+    <p class="text">"Clicar e arrastar" é uma forma de mover determinados objetos na tela. Para mover um objeto, coloque o cursor do mouse sobre ele, pressione e segure o botão esquerdo do mouse e mova o mouse.</p>
+    <p class="text">Depois de "arrastar" o objeto para o local desejado, solte o botão do mouse.</p>
+    <p class="text">Leve o quadrado azul até o branco </p>
+    <br>
+    <div class="square" id="drag-me"></div>
+
+    <div class="text2"></div>
+
+    <button id="continue-button" onclick="location = 'index29.html'" >Continuar</button>
+
+    <!---->
+
+</body>
+
+<script>
+
+    const square = document.getElementById('drag-me');
+    const continueButton = document.getElementById('continue-button');
+
+    let isDragging = false;
+    let offsetX, offsetY;
+
+ 
+
+    square.addEventListener('mousedown', (e) => {
+        isDragging = true;
+        offsetX = e.clientX - square.getBoundingClientRect().left;
+        offsetY = e.clientY - square.getBoundingClientRect().top;
+        square.style.cursor = 'grabbing';
+    });
+
+ 
+
+    document.addEventListener('mousemove', (e) => {
+
+        if (!isDragging) return;
+        const x = e.clientX - offsetX;
+        const y = e.clientY - offsetY;
+
+ 
+
+    square.style.transform = `translate(${x}px, ${y}px)`;
+
+    // Verifica se o quadrado está sobre o texto
+
+        if (
+
+            x >= 800 &&
+            x <= 800 + 100 &&
+            y >= 100 &&
+            y <= 100 + 50
+
+        ) {
+
+            continueButton.style.display = 'block';
+        } else {
+            continueButton.style.display = 'none';
+
+        }
+
+    });
+
+ 
+
+    document.addEventListener('mouseup', () => {
+        isDragging = false;
+        square.style.cursor = 'grab';
+
+    });
+
+</script>
+
+</html>
+</body>
+</html>

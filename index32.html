@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script type="text/javascript" src="script.js"></script>
+</head>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #EDE7F6;
+        margin: 0;
+        padding: 0;
+    }
+    
+    .mg {
+        background-color: purple;
+        color: #fff;
+        padding: 20px;
+        text-align: center;
+    }
+    
+    .text {
+        text-align: center;
+    }
+
+    .cesta1{
+        display: none;
+        position: absolute;
+        width: 300px ;
+        height: 300px;
+        top: 25%;
+        left:42% ;
+    }
+
+    .cesta2{
+        display: none;
+        position: absolute;
+        width: 300px ;
+        height: 400px;
+        top: 25%;
+        left:42%;
+    }
+
+    
+    .cesta3{
+        display: none;
+        position: absolute;
+        width: 300px ;
+        height: 400px;
+        top: 25%;
+        left:42% ;
+    }
+    
+    .chackbox{
+       align-content: center;
+
+    }
+
+    #btcont{
+        display: none;
+        border-color: purple;
+        position: relative;
+        left: 20%;
+
+    }
+
+</style>
+
+<body>
+    <div class="mg"><h1>Mouse Game</h1></div>
+
+    <br>
+    <p class="text"> Clique nas três opções e clique na opção ‘Continuar’. </p>
+    <p class="text"> O correspondente aos itens está em paralelo</p>
+    <br>
+
+    <div>
+        <div class="chackbox">
+            <input type="radio" name="option"  id="Flores" onclick="doce1(); addum()"><strong>Flores</strong><br><br>
+            <input type="radio" name="option" id="Borboleta" onclick="doce2(); addum2()"><strong>Borboleta</strong><br><br>
+            <input type="radio" name="option" id="Abelha" onclick="doce3(); addum3()" ><strong>Livro</strong><br><br>            
+        </div>
+
+        <picture>
+            <img id="cesta1" class="cesta1 c" src="2page18.image.gif">
+            <img  id="cesta2" class="cesta2 c" src="page22.png">
+            <img id="cesta3" class="cesta3 c" src="2page32.png">
+        </picture>
+
+<div><button id="btcont" onclick="location = 'index33.html'">Continuar</button></div>
+
+        
+    <script>
+ var check = 0
+var tcheck = 3
+
+function vcheck(){
+    if(check===tcheck) {
+        document.getElementById("btcont").style.display = "block";  
+
+        }
+        else{
+            btcont.style.display="none"
+        }
+
+ }
+
+function addum(){
+    check ++;
+    vcheck();
+}
+
+function addum2(){
+    check ++;
+    vcheck();
+}
+
+function addum3(){
+    check ++;
+    vcheck();
+}
+
+
+        
+    
+      function doce1() {
+var checkbox = document.getElementById("Flores");
+var imagem = document.getElementById("cesta1");
+
+if (checkbox.checked) {
+    imagem.style.display = "block"; // Mostra a imagem
+} else {
+    imagem.style.display = "none"; // Oculta a imagem
+}
+
+}
+
+function doce2() {
+var checkbox = document.getElementById("Borboleta");
+var imagem = document.getElementById("cesta2");
+
+if (checkbox.checked) {
+    imagem.style.display = "block"; // Mostra a imagem
+} else {
+    imagem.style.display = "none"; // Oculta a imagem
+}
+
+}
+
+function doce3() {
+var checkbox = document.getElementById("Abelha");
+var imagem = document.getElementById("cesta3");
+
+if (checkbox.checked) {
+    imagem.style.display = "block"; // Mostra a imagem
+} else {
+    imagem.style.display = "none"; // Oculta a imagem
+}
+
+}
+
+    </script>
+
+
+</body>
